@@ -12,9 +12,9 @@ public abstract class Puzzle {
 
     protected List<String> puzzleInput = null;
 
-    public Puzzle(int day, String fileName) {
-        System.out.println("######### Day " + day + ": " + this.getClass().getSimpleName() + " ########");
-        Path filePath = Path.of("input", "day" + day, fileName);
+    public Puzzle(String folderName, String fileName) {
+        System.out.println("######### " + folderName + ": " + this.getClass().getSimpleName() + " ########");
+        Path filePath = Path.of("input", folderName, fileName);
         System.out.print("Reading input file " + filePath.toString() + " ...");
         try {
             this.puzzleInput = Files.readAllLines(filePath);

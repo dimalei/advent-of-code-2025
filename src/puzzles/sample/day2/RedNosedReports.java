@@ -1,4 +1,4 @@
-package puzzles.day2;
+package puzzles.sample.day2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import puzzles.Puzzle;
 public class RedNosedReports extends Puzzle {
 
     public RedNosedReports(String fileName) {
-        super(2, fileName);
+        super("test2", fileName);
     }
 
     @Override

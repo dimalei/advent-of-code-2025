@@ -1,4 +1,4 @@
-package puzzles.day1;
+package puzzles.sample.day1;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -10,7 +10,7 @@ import puzzles.Puzzle;
 public class HistorianHysteria extends Puzzle {
 
     public HistorianHysteria(String fileName) {
-        super(1, fileName);
+        super("test1", fileName);
     }
 
     @Override

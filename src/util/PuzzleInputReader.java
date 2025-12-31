@@ -7,8 +7,8 @@ import java.util.List;
 
 public class PuzzleInputReader {
 
-    public static List<String> readFile(int day, String fileName) throws IOException {
-        Path filePath = Path.of("input", "day" + day, fileName);
+    public static List<String> readFile(String folderName, String fileName) throws IOException {
+        Path filePath = Path.of("input", folderName, fileName);
         System.out.println(filePath.toString());
         return Files.readAllLines(filePath);
     }
