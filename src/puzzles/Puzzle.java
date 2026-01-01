@@ -55,9 +55,9 @@ public abstract class Puzzle {
             for (int i = 0; i < solution.length(); i++) {
                 bar += "━";
             }
-            System.out.println("┏" + bar + "┓");
-            System.out.println("┃" + solution + "┃");
-            System.out.println("┗" + bar + "┛");
+            System.out.println(bar);
+            System.out.println(solution);
+            System.out.println(bar);
         } catch (UnsupportedOperationException e) {
             // ignored
         } catch (Exception e) {
