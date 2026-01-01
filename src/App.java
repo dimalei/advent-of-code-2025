@@ -1,6 +1,7 @@
 import puzzles.day1.SecretEntrance;
 import puzzles.day2.GiftShop;
 import puzzles.day3.Lobby;
+import puzzles.day4.PrintingDepartment;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -17,6 +18,10 @@ public class App {
         // day3
         var day3 = new Lobby(fileName);
         day3.solve();
+
+        // day4
+        var day4 = new PrintingDepartment(fileName);
+        day4.solve();
     }
 
     private static String getFileName(String[] args) {
