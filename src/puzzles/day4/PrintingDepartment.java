@@ -1,7 +1,6 @@
 package puzzles.day4;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import puzzles.Puzzle;
