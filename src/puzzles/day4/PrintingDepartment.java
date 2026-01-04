@@ -12,10 +12,10 @@ public class PrintingDepartment extends Puzzle {
 
     public PrintingDepartment(String fileName) {
         super("day4", fileName);
-        parseInput();
     }
 
-    private void parseInput() {
+    @Override
+    protected void processInput() {
         int width = super.puzzleInput.get(0).length();
         int height = super.puzzleInput.size();
 

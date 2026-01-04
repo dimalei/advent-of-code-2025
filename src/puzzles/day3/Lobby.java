@@ -79,4 +79,9 @@ public class Lobby extends Puzzle {
         return Long.valueOf(totalBuilder.toString());
     }
 
+    @Override
+    protected void processInput() {
+        // do nothing
+    }
+
 }

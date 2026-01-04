@@ -58,4 +58,10 @@ public class RedNosedReports extends Puzzle {
         return parsed;
     }
 
+    @Override
+    protected void processInput() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'processInput'");
+    }
+
 }

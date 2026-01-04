@@ -16,35 +16,6 @@ public class Cafeteria extends Puzzle {
 
     public Cafeteria(String fileName) {
         super("day5", fileName);
-
-        parseInput();
-    }
-
-    private void parseInput() {
-        boolean parsingRanges = true;
-        for (String line : super.puzzleInput) {
-
-            if (line.isBlank()) {
-                parsingRanges = false;
-
-                // create an ordered list (range beginning) of ranges
-            } else if (parsingRanges) {
-                long[] range = Arrays.stream(line.split("-"))
-                        .mapToLong(num -> Long.valueOf(num))
-                        .toArray();
-
-                int insertionPoint = Collections.binarySearch(ranges, range, Comparator.comparingLong(r -> r[0]));
-                if (insertionPoint < 0) {
-                    insertionPoint = insertionPoint * -1 - 1;
-                }
-
-                ranges.add(insertionPoint, range);
-
-                // create an unordered lists of ids to check
-            } else {
-                ingredients.add(Long.valueOf(line));
-            }
-        }
     }
 
     @Override
@@ -134,6 +105,34 @@ public class Cafeteria extends Puzzle {
         newRange[1] = rangeA[1] > rangeB[1] ? rangeA[1] : rangeB[1];
 
         return newRange;
+    }
+
+    @Override
+    protected void processInput() {
+        boolean parsingRanges = true;
+        for (String line : super.puzzleInput) {
+
+            if (line.isBlank()) {
+                parsingRanges = false;
+
+                // create an ordered list (range beginning) of ranges
+            } else if (parsingRanges) {
+                long[] range = Arrays.stream(line.split("-"))
+                        .mapToLong(num -> Long.valueOf(num))
+                        .toArray();
+
+                int insertionPoint = Collections.binarySearch(ranges, range, Comparator.comparingLong(r -> r[0]));
+                if (insertionPoint < 0) {
+                    insertionPoint = insertionPoint * -1 - 1;
+                }
+
+                ranges.add(insertionPoint, range);
+
+                // create an unordered lists of ids to check
+            } else {
+                ingredients.add(Long.valueOf(line));
+            }
+        }
     }
 
 }

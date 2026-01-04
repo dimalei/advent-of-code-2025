@@ -27,6 +27,14 @@ public abstract class Puzzle {
     }
 
     public void solve() {
+        Instant start = Instant.now();
+
+        processInput();
+
+        Instant end = Instant.now();
+        Duration duration = Duration.between(start, end);
+        System.out.println("Pre-Processing time ms: " + duration.toMillis());
+
         solvePuzzle(() -> part1(), "Part 1");
         solvePuzzle(() -> part2(), "Part 2");
     }
@@ -65,6 +73,8 @@ public abstract class Puzzle {
             e.printStackTrace();
         }
     }
+
+    abstract protected void processInput();
 
     abstract protected String part1();
 

@@ -70,4 +70,9 @@ public class SecretEntrance extends Puzzle {
         return String.valueOf(zeroCounter);
     }
 
+    @Override
+    protected void processInput() {
+        // do nothing
+    }
+
 }

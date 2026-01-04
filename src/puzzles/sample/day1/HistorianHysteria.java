@@ -70,4 +70,10 @@ public class HistorianHysteria extends Puzzle {
             }
         }
     }
+
+    @Override
+    protected void processInput() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'processInput'");
+    }
 }

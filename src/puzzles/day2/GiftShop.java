@@ -14,13 +14,13 @@ public class GiftShop extends Puzzle {
 
     public GiftShop(String fileName) {
         super("day2", fileName);
-        parseInput();
     }
 
     /*
      * Turn the single line puzzle input into ranges (upper, lower)
      */
-    private void parseInput() {
+    @Override
+    protected void processInput() {
         for (String line : super.puzzleInput) {
 
             String[] allRanges = line.split(",");

@@ -3,6 +3,7 @@ import puzzles.day2.GiftShop;
 import puzzles.day3.Lobby;
 import puzzles.day4.PrintingDepartment;
 import puzzles.day5.Cafeteria;
+import puzzles.day6.TrashCompactor;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -27,6 +28,10 @@ public class App {
         // day5
         var day5 = new Cafeteria(fileName);
         day5.solve();
+
+        // day6
+        var day6 = new TrashCompactor(fileName);
+        day6.solve();
     }
 
     private static String getFileName(String[] args) {
