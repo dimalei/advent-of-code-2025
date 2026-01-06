@@ -100,6 +100,7 @@ public class TrashCompactor extends Puzzle {
                 numberStringBuilder.append(puzzleInput.get(row).charAt(column));
             }
             numbers.add(Integer.valueOf(numberStringBuilder.toString().trim()));
+            numberStringBuilder.delete(0, numberStringBuilder.length());
 
             if (puzzleInput.getLast().charAt(column) == '*') {
                 // multiply all
@@ -128,7 +129,6 @@ public class TrashCompactor extends Puzzle {
                 column--;
             }
 
-            numberStringBuilder.delete(0, numberStringBuilder.length());
             column--;
         }
 

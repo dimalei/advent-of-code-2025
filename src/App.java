@@ -4,6 +4,7 @@ import puzzles.day3.Lobby;
 import puzzles.day4.PrintingDepartment;
 import puzzles.day5.Cafeteria;
 import puzzles.day6.TrashCompactor;
+import puzzles.day7.Laboratories;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -32,6 +33,10 @@ public class App {
         // day6
         var day6 = new TrashCompactor(fileName);
         day6.solve();
+
+        // day7
+        var day7 = new Laboratories(fileName);
+        day7.solve();
     }
 
     private static String getFileName(String[] args) {
