@@ -9,6 +9,7 @@ import puzzles.day8.Playground;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        boolean isTest = getIsTest(args);
         String fileName = getFileName(args);
 
         // day1
@@ -41,6 +42,7 @@ public class App {
 
         // day8
         var day8 = new Playground(fileName);
+        day8.setTest(isTest);
         day8.solve();
 
     }
@@ -52,5 +54,14 @@ public class App {
             }
         }
         return "test.txt";
+    }
+
+    private static boolean getIsTest(String[] args) {
+        for (String arg : args) {
+            if (arg.equals("-final")) {
+                return false;
+            }
+        }
+        return true;
     }
 }
